@@ -1,1 +1,3 @@
 # Game loop
+
+input()
