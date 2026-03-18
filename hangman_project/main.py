@@ -1,3 +1,2 @@
 # Game loop
 
-input()
