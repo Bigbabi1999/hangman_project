@@ -2,4 +2,4 @@
 
 import random
 #make the Game loop infinite in random
-print(len)
+print(random)
