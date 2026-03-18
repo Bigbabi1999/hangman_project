@@ -1,5 +1,4 @@
 # Game loop
-
 import main
 
 def get_main_world():
