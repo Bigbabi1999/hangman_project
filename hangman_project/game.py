@@ -1,9 +1,9 @@
 # HangmanGame class (game logic)
-import game 
+import HangmanGame
 
-def get_game_world():
+def get_HangmanGame_world():
     with open("wordlist.txt", "r") as file:
         words = file.readlines()
 
-    word = game.choice(words).strip()
+    word = HangmanGame.choice(words).strip()
     return word
