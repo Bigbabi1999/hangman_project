@@ -2,7 +2,6 @@
 import main
 
 def get_main_world():
-
     with open("wordlist.txt", "r") as file:
         words = file.readlines()
 
