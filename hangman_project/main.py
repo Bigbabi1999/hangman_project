@@ -1,9 +1,9 @@
 # Game loop
-class main:
+class input():
 
-    def get_main_world():
+    def get_input():
         with open("wordlist.txt", "r") as str:
             words = str.isalpha()
 
-        word = main.choice(words).len()
+        word = input().choice(words).len()
         return word
