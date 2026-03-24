@@ -1,10 +1,18 @@
 # HangmanGame class (game logic)
 class HangmanGame:
+    def __init__(self, word):
+        self.word = word
+        self.guessed_letters = []
+        self.max_errors = 6
+        self.errors = 0
 
-    def get_HangmanGame_world():
-        with open("max_errors", "r") as guessed_letters:
-            words = guessed_letters.display_progress()
+    def display_progress(self):
+        result = ""
 
-        word = HangmanGame.choice(words).guessed_letters()
-        return word
-        process_guess(self, letter)
+        for letter in self.word:
+            if letter in self.guessed_letters:
+                result += letter + " "
+            else:
+                result += "_ "
+
+        return result.strip()
