@@ -7,3 +7,4 @@ class HangmanGame:
 
         word = HangmanGame.choice(words).guessed_letters()
         return word
+        process_guess(self, letter)
