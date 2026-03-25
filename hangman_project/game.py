@@ -36,3 +36,12 @@ class HangmanGame:
                 display += "_"
 
         print(display.strip())
+
+    def is_won(self):
+        for letter in self.word:
+            if letter not in self.guessed_letters:
+                return False
+        return True
+
+    def is_lost(self):
+        return self.errors >= self.max_errors
