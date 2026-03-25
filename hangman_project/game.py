@@ -16,4 +16,3 @@ class HangmanGame:
                 result += "_"
 
         return result.strip()
-
