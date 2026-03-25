@@ -13,6 +13,7 @@ class HangmanGame:
             if letter in self.guessed_letters:
                 result += letter + " "
             else:
-                result += "_ "
+                result += "_"
 
         return result.strip()
+
