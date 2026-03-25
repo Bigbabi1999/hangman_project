@@ -16,3 +16,12 @@ class HangmanGame:
                 result += "_"
 
         return result.strip()
+
+    def process_guess(self, letter):
+        # check if letter is in the word
+        if letter in self.word:
+            self.guessed_letters.append(letter)
+            return True
+        else:
+            self.errors += 1
+            return False
