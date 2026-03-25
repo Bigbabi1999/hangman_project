@@ -35,3 +35,13 @@ while True:
         print("Wrong guess!")
     
     game.display_process()
+
+    # CHECK GAME END
+    if game.is_won():
+        print("You WON!")
+        break
+
+    if game.is_lost():
+        print("You LOST!")
+        print("the word was:", game.word)
+        break
