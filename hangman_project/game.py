@@ -25,3 +25,14 @@ class HangmanGame:
         else:
             self.errors += 1
             return False
+        
+    def display_process(self):
+        display = ""
+
+        for letter in self.word:
+            if letter in self.guessed_letters:
+                display += letter + " "
+            else:
+                display += "_"
+
+        print(display.strip())
