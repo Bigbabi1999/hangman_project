@@ -12,7 +12,7 @@ while True:
     if len(guess) != 1:
         print("Please enter ONLY one letter")
         continue
-              
+
     # check: must be alphabet
     if not guess.isalpha():
         print("please enter a LETTER")
