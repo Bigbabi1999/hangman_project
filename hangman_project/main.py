@@ -33,7 +33,7 @@ while True:
         print("Correct guess!")
     else:
         print("Wrong guess!")
-    
+
     game.display_process()
 
     # CHECK GAME END
