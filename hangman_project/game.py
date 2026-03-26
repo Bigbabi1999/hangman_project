@@ -25,7 +25,7 @@ class HangmanGame:
         else:
             self.errors += 1
             return False
-        
+
     def display_process(self):
         display = ""
 
