@@ -45,3 +45,4 @@ class HangmanGame:
 
     def is_lost(self):
         return self.errors >= self.max_errors
+    str.isalpha()
