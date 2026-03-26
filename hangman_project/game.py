@@ -47,4 +47,4 @@ class HangmanGame:
         return self.errors >= self.max_errors
 
     str.isalpha()
-    # dont make it manuelly make it automactically-reveal and dont make it to far
+    # dont make it manuelly-reveal make it automactically-reveal and dont make it to far
