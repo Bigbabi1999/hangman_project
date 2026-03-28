@@ -10,7 +10,9 @@ class HangmanGame:
         result = ""
 
         for letter in self.word:
-            if letter in self.guessed_letters:
+            if not letter.isalpha():
+                display += letter + " "
+            elif letter in self.guessed_letters:
                 result += letter + " "
             else:
                 result += "_"
