@@ -1,8 +1,8 @@
 # Game loop
 from game import HangmanGame
-from utils import get_random_word
+from utils import get_random
 
-word = get_random_word()
+word = get_random()
 game = HangmanGame(word)
 
 while True:
