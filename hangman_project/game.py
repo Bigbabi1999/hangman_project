@@ -48,6 +48,5 @@ class HangmanGame:
     def is_lost(self):
         return self.errors >= self.max_errors
 
-    str.isalpha()
     display_progress()
     # dont make it manuelly-reveal make it automactically-reveal and dont make it to far
