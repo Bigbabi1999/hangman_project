@@ -1,7 +1,7 @@
 # Helper functions
 import random
 
-def get_random_world():
+def get_random():
     with open("wordlist.txt", "r") as file:
         words = file.readlines()
 
