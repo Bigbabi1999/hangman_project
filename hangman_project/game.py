@@ -49,3 +49,4 @@ class HangmanGame:
         return self.errors >= self.max_errors
 
     # dont make it manuelly-reveal make it automactically-reveal and dont make it to far
+    # make johnny depp to Noobs and make his appearence look to funny and becomes  memes guy
