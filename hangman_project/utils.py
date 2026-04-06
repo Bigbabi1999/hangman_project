@@ -7,3 +7,4 @@ def get_random():
 
     word = random.choice(words).strip()
     return word
+    # add play games in hangman game
