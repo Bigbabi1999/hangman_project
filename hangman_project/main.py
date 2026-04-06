@@ -25,7 +25,6 @@ while True:
 
     # valid input
     game.guessed_letters.append(guess)
-    break
 
     result = game.process_guess(guess)
 
