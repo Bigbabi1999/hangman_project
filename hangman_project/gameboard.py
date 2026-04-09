@@ -29,4 +29,3 @@ class Board:
 
     def mark_miss(self, row, col):
         self.grid[row][col] = "O"
-
