@@ -1,3 +1,4 @@
+import random
 class Board:
     def __init__(self, size=5):
         self.size = size
@@ -29,3 +30,44 @@ class Board:
 
     def mark_miss(self, row, col):
         self.grid[row][col] = "O"
+
+    def place_ship(self, ship):
+        placed = False
+
+        while not placed:
+            # Random orientation
+            orientation = random.choice(["H","V"])
+            ship.orientation = orientation
+
+            # Random starting position
+            row = random.randint(0, self.size - 1)
+            col = random.randint(0, self.size - 1)
+
+            coordinates = []
+
+            if orientation == "H":
+                if col + ship.size > self.size:
+                    continue # out of bounds
+                
+                for i in range(ship.size):
+                    if self.grid[row][col + i] != "~":
+                        break # overlap
+                    coordinates.append((row, col + i))
+                else:
+                    placed = True
+            else: # Vertical
+                    if row + ship.size > self.size:
+                        continue # out of bounds
+
+                    for i in range(ship.size):
+                        if self.grid[row + i][col] != "~":
+                            break # overlap
+                        coordinates.append((row + i, col))
+                    else:
+                        placed = True
+
+                #Place ship if valid
+            if placed:
+                for r, c in coordinates:
+                    self.grid[r][c] = "S"
+                    ship.coordinates = coordinates
