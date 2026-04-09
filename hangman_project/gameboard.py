@@ -8,7 +8,7 @@ class Board:
         # print column headers (A,B,C, ...)
         header = " " + " " .join(chr(ord('A') + i) for i in range(self.size))
         print(header)
-        
+
         for i in range(self.size):
             row_display = []
 
