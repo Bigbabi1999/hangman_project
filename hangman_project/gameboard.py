@@ -48,7 +48,7 @@ class Board:
             if orientation == "H":
                 if col + ship.size > self.size:
                     continue # out of bounds
-                
+
                 for i in range(ship.size):
                     if self.grid[row][col + i] != "~":
                         break # overlap
