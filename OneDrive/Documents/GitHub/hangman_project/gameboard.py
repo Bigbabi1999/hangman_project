@@ -72,3 +72,5 @@ class Board:
                     self.grid[r][c] = "S"
                     ship.coordinates = coordinates
     # make it into 2D
+    # make into Noobs while im making the mess
+    # make someone cry in villagers
