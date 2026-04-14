@@ -71,6 +71,28 @@ class Board:
                 for r, c in coordinates:
                     self.grid[r][c] = "S"
                     ship.coordinates = coordinates
-    # make it into 2D
-    # make into Noobs while im making the mess
-    # make someone cry in villagers
+
+    def take_shot(self, row, col, ships):
+        # if already shot here
+        if self.grid[row][col] in ["X", "O"]:
+            return "Already targeted!"
+        
+        # if its a hit
+        if self.grid[row][col] == "S":
+            self.grid[row][col] = "X"
+
+            # Check which ship was hit
+            for ship in ships:
+                if (row, col) in ship.coordinates:
+                    # Remove that coordinate (hit)
+                    ship.coordinates.remove((row, col))
+                    # Check if ship is sunk
+                    if not ship.coordinates:
+                        return f"You sunk the {ship.name}"
+                    
+                    return "Hit!"
+                
+        else:
+            # Miss
+            self.grid[row][col] = "O"
+            return "Miss!"
