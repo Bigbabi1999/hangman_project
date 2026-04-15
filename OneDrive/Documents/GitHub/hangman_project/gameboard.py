@@ -89,7 +89,7 @@ class Board:
                     # Check if ship is sunk
                     if not ship.coordinates:
                         return f"You sunk the {ship.name}"
-                    
+
                     return "Hit!"
 
         else:
