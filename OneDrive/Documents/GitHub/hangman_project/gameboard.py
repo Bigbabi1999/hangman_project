@@ -76,7 +76,7 @@ class Board:
         # if already shot here
         if self.grid[row][col] in ["X", "O"]:
             return "Already targeted!"
-        
+
         # if its a hit
         if self.grid[row][col] == "S":
             self.grid[row][col] = "X"
@@ -91,7 +91,7 @@ class Board:
                         return f"You sunk the {ship.name}"
                     
                     return "Hit!"
-                
+
         else:
             # Miss
             self.grid[row][col] = "O"
