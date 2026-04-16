@@ -1,3 +1,5 @@
+import random
+
 class Player:
     def __init__(self, name):
         self.name = name
@@ -19,3 +21,13 @@ class Player:
 
             except:
                 print("Invalid input! Try again")
+
+class ComputerPlayer(Player):
+    def get_shot(self, board_size):
+        while True:
+            row = random.randint(0, board_size - 1)
+            col = random.randint(0, board_size - 1)
+            if (row, col) not in self.shots_taken:
+                self.shots_taken.add((row, col))
+                print(f"Computer shoots at {chr(col + 65)}{row + 1}")
+                return row, col
