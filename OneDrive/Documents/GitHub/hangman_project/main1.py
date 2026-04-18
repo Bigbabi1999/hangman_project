@@ -2,9 +2,12 @@ from gameboard import Board
 from ship import Ship
 from player import Player, ComputerPlayer
 
+from utils1 import log_game
+
 # Setup
 player = Player("You")
-computer = ComputerPlayer("AI") 
+computer = ComputerPlayer("AI")
+turns = 0
 
 player_board = Board()
 computer_board = Board()
@@ -21,6 +24,7 @@ for ship in computer_ships:
 
 # Game loop
 while True:
+    turns += 1
     print("\nYour Turn")
     computer_board.print_board()
 
@@ -31,6 +35,7 @@ while True:
     # Check win
     if all(len(ship.coordinatescoordinates) == 0 for ship in computer_ships):
         print("You win!")
+        log_game("Player", turns)
         break
     print("\nComputer's Turn")
     row, col = computer.get_shot(computer_board.size)
@@ -39,4 +44,5 @@ while True:
 
     if all(len(ship.coordinates) == 0 for ship in ships):
         print("Computer wins!")
+        log_game("computer", turns)
         break
