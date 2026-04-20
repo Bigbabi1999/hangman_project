@@ -24,7 +24,6 @@ class Player:
 class ComputerPlayer(Player):
     def get_shot(self, board_size):
         while True:
-
             row = random.randint(0, board_size - 1)
             col = random.randint(0, board_size - 1)
             if (row, col) not in self.shots_taken:
