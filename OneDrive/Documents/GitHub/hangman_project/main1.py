@@ -1,7 +1,6 @@
 from gameboard import Board
 from ship import Ship
 from player import Player, ComputerPlayer
-
 from utils1 import log_game
 
 # Setup
