@@ -36,6 +36,7 @@ while True:
         print("You win!")
         log_game("Player", turns)
         break
+
     print("\nComputer's Turn")
     row, col = computer.get_shot(computer_board.size)
     result = player_board.take_shot(row, col, ships)
