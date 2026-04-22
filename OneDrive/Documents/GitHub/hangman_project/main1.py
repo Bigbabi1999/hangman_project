@@ -70,7 +70,7 @@ def main():
 
         choice = input("Enter your choice:")
         if choice == "1":
-            play_game()
+                play_game()
 
         elif choice == "2":
             view_history()
