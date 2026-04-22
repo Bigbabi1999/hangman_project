@@ -33,7 +33,7 @@ def play_game():
         result = computer_board.take_shot(row, col, computer_ships)
         print(result)
 
-        
+
         # Check win
         if all(len(ship.coordinatescoordinates) == 0 for ship in computer_ships):
             print("You win!")
