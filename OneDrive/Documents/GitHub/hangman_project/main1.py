@@ -35,7 +35,7 @@ def play_game():
 
 
         # Check win
-        if all(len(ship.coordinatescoordinates) == 0 for ship in computer_ships):
+        if all(len(ship.coordinates) == 0 for ship in computer_ships):
             print("You win!")
             log_game("Player", turns, ships_sunk)
             break
@@ -71,7 +71,7 @@ def main():
 
         choice = input("Enter your choice:")
         if choice == "1":
-                play_game()
+            play_game()
 
         elif choice == "2":
             view_history()
@@ -84,4 +84,4 @@ def main():
             print("invalid choice, try again")
 
 if __name__ == "__main__":
-        main()
+    main()
