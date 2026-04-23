@@ -50,7 +50,7 @@ def play_game():
 
         if all(len(ship.coordinates) == 0 for ship in ships):
             print("Computer wins!")
-            log_game("computer", turns)
+            log_game("computer", turns, ships_sunk)
             break
 
 def view_history():
