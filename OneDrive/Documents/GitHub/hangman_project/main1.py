@@ -29,10 +29,19 @@ def play_game():
         print("\nYour Turn")
         computer_board.print_board()
 
-        row, col = player.get_shot()
-        result = computer_board.take_shot(row, col, computer_ships)
-        print(result)
+        while True:
+            try:
+                row, col = player.get_shot()
+                if row < 0 or col < 0 or row >= computer_board.size or col >= computer_board.size:
+                    raise IndexError
+                result = computer_board.take_shot(row, col, computer_ships)
+                print(result)
+                break
+            except IndexError:
+                print("invalid coordinates! try again")
 
+            except Exception:
+                print("invalid input format! Use something like A1")
         # Check win
         if all(len(ship.coordinates) == 0 for ship in computer_ships):
             print("You win!")
