@@ -13,7 +13,7 @@ def play_game():
 
     player_board = Board()
     computer_board = Board()
-
+    ships = [Ship("Destroyer", 2), Ship("Submarine", 3)]
     # Player turn
     print("\nYour Turn")
     player_board.print_board()
@@ -21,10 +21,10 @@ def play_game():
     row, col = player.get_shot()
     result = player_board.take_shot(row, col, ships)
     print(result)
-    player_board.print_board(hide_ships=False)
+    player_board.print_board(hide_ships = False)
 
     # Create ships
-    ships = [Ship("Destroyer", 2), Ship("Submarine", 3)]
+    
     # Place ships
     for ship in ships:
         player_board.place_ship(ship)
