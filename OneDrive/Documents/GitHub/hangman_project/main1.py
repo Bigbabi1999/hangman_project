@@ -65,7 +65,7 @@ def play_game():
         computer_board.print_board(hide_ships= False)
 
         #Track ships sunk by computer
-        if "sunk" in result.lower():
+        if result and "sunk" in result.lower():
             ships_sunk += 1
 
         if all(len(ship.coordinates) == 0 for ship in ships):
