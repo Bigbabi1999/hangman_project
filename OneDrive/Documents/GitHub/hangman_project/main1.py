@@ -3,6 +3,14 @@ from ship import Ship
 from player import Player, ComputerPlayer
 from utils1 import log_game
 
+    # Player turn
+    print("\nYour Turn")
+    board.print_board()
+
+    row, col = player.get_shot()
+    result = board.take_shot(row, col, ships)
+    print(result)
+
 def play_game():
     # Setup
     player = Player("You")
