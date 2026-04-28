@@ -69,6 +69,7 @@ def view_history():
             print(file.read())
     except FileNotFoundError:
         print("No game history found")
+        # Player turn
 
 def main():
     while True:
