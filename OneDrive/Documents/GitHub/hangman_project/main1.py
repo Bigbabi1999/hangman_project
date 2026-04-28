@@ -60,9 +60,9 @@ def play_game():
 
         print("\nComputer's Turn")
         row, col = computer.get_shot(computer_board.size)
-        result = computer_board.take_shot(row, col, ships)
+        result = player_board.take_shot(row, col, ships)
         print(result)
-        computer_board.print_board(hide_ships= False)
+        player_board.print_board(hide_ships= False)
 
         #Track ships sunk by computer
         if result and "sunk" in result.lower():
