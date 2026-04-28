@@ -16,11 +16,12 @@ def play_game():
 
     # Player turn
     print("\nYour Turn")
-    board.print_board()
+    player_board.print_board()
 
     row, col = player.get_shot()
-    result = board.take_shot(row, col, ships)
+    result = player_board.take_shot(row, col, ships)
     print(result)
+    player_board.print_board(hide_ships=False)
 
     # Create ships
     ships = [Ship("Destroyer", 2), Ship("Submarine", 3)]
@@ -59,8 +60,9 @@ def play_game():
 
         print("\nComputer's Turn")
         row, col = computer.get_shot(computer_board.size)
-        result = player_board.take_shot(row, col, ships)
+        result = computer_board.take_shot(row, col, ships)
         print(result)
+        computer_board.print_board(hide_ships= False)
 
         #Track ships sunk by computer
         if "sunk" in result.lower():
