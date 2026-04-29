@@ -24,7 +24,7 @@ def play_game():
     player_board.print_board(hide_ships = False)
 
     # Create ships
-    
+
     # Place ships
     for ship in ships:
         player_board.place_ship(ship)
