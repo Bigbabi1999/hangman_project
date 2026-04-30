@@ -37,6 +37,7 @@ def play_game():
     while True:
         turns += 1
         print("\nYour Turn")
+        print("/n Enemy Board:")
         computer_board.print_board()
 
         while True:
@@ -62,11 +63,15 @@ def play_game():
         row, col = computer.get_shot(computer_board.size)
         result = player_board.take_shot(row, col, ships)
         print(result)
-        player_board.print_board(hide_ships= False)
+        
+        
 
         #Track ships sunk by computer
         if result and "sunk" in result.lower():
             ships_sunk += 1
+            
+        print("Your Board: ")
+        player_board.print_board(hide_ships= False)
 
         if all(len(ship.coordinates) == 0 for ship in ships):
             print("Computer wins!")
