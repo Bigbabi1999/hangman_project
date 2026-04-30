@@ -22,7 +22,7 @@ class Board:
             # print row number + row content
             print(f"{i + 1}" + " ".join(row_display))
 
-    def place_computer(self, row, col):
+    def place_ship(self, row, col):
         self.grid[row][col] = "S"
 
     def mark_hit(self, row, col):
