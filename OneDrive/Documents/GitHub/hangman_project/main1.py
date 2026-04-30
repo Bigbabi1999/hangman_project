@@ -37,7 +37,7 @@ def play_game():
     while True:
         turns += 1
         print("\nYour Turn")
-        print("/n Enemy Board:")
+        print("\n Enemy Board:")
         computer_board.print_board()
 
         while True:
@@ -69,7 +69,7 @@ def play_game():
         #Track ships sunk by computer
         if result and "sunk" in result.lower():
             ships_sunk += 1
-            
+
         print("Your Board: ")
         player_board.print_board(hide_ships= False)
 
